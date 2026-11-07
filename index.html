@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#10121d">
+  <meta name="description" content="Explore Kallitone's independent music community and Concert Empire: Idle Tycoon.">
+  <title>Kallitone Projects</title>
+  <style>
+    :root {
+      color-scheme: dark;
+      font-family: system-ui, sans-serif;
+      color: #f5f3f8;
+      background: #10121d;
+    }
+
+    * { box-sizing: border-box; }
+    body {
+      display: grid;
+      place-items: center;
+      min-height: 100vh;
+      margin: 0;
+      padding: clamp(2rem, 8vw, 6rem) 1.25rem;
+      background:
+        radial-gradient(ellipse at 9% 15%, #2b2349, transparent 45%),
+        radial-gradient(ellipse at 96% 77%, #183339, transparent 40%),
+        #10121d;
+    }
+
+    main { width: min(100%, 55rem); }
+    .studio {
+      display: inline-flex;
+      align-items: center;
+      gap: .65rem;
+      margin: 0 0 1.25rem;
+      color: #e0d5f3;
+      font-size: .8rem;
+      font-weight: 750;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+    }
+    .studio svg {
+      width: 2rem;
+      height: 2rem;
+      padding: .35rem;
+      border: 1px solid #e0d5f34d;
+      border-radius: .65rem;
+      background: #e0d5f314;
+    }
+    h1 {
+      margin: 0;
+      font-size: clamp(2.5rem, 7.5vw, 5.3rem);
+      font-weight: 800;
+      letter-spacing: -.075em;
+      line-height: .97;
+    }
+    .intro {
+      max-width: 42ch;
+      margin: 1rem 0 2.2rem;
+      color: #cdc8d8;
+      font-size: clamp(1rem, 2.4vw, 1.18rem);
+      line-height: 1.6;
+    }
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 1rem;
+    }
+    .project {
+      display: grid;
+      grid-template-rows: auto 1fr;
+      overflow: hidden;
+      border: 1px solid #f1edf230;
+      border-radius: 1.1rem;
+      background: #1a1d2a;
+      color: inherit;
+      text-decoration: none;
+      transition: border-color .18s, transform .18s, box-shadow .18s;
+    }
+    .project:hover {
+      transform: translateY(-3px);
+      border-color: var(--accent);
+      box-shadow: 0 .9rem 2rem #08091365;
+    }
+    .project:focus-visible { outline: 3px solid var(--accent); outline-offset: 5px; }
+    .game { --accent: #f4cb86; --art: #233d33; --glow: #4d694b; }
+    .music { --accent: #d8bafc; --art: #33254b; --glow: #624b85; }
+    .art {
+      display: grid;
+      place-items: center;
+      height: 8.6rem;
+      color: var(--accent);
+      background:
+        radial-gradient(ellipse at center, var(--glow), transparent 72%),
+        var(--art);
+    }
+    .art svg { width: 9.5rem; height: 6.2rem; }
+    .copy { display: flex; flex-direction: column; padding: 1.35rem; }
+    .category {
+      color: var(--accent);
+      font-size: .72rem;
+      font-weight: 750;
+      letter-spacing: .13em;
+      text-transform: uppercase;
+    }
+    h2 {
+      margin: .4rem 0;
+      font-size: clamp(1.5rem, 4.4vw, 2rem);
+      letter-spacing: -.04em;
+      line-height: 1.13;
+    }
+    .copy p { margin: .15rem 0 1.2rem; color: #cdc8d8; line-height: 1.5; }
+    .action { margin-top: auto; color: var(--accent); font-size: .92rem; font-weight: 740; }
+    .action span { margin-inline-start: .25rem; }
+
+    @media (max-width: 37rem) {
+      .projects { grid-template-columns: minmax(0, 1fr); }
+      .art { height: 7.25rem; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .project { transition: none; }
+      .project:hover { transform: none; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <p class="studio">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+        <path d="M3 12h2l2-5 4 10 4-10 2 5h4"/>
+      </svg>
+      Orkaan Studio
+    </p>
+    <h1>Kallitone Projects</h1>
+    <p class="intro">Explore our music platform and concert management game.</p>
+
+    <nav class="projects" aria-label="Projects">
+      <a class="project game" href="https://kallitone.github.io/concert-empire-legal/">
+        <div class="art" aria-hidden="true">
+          <svg viewBox="0 0 160 104" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" stroke-linecap="round">
+            <path d="M30 34h100L118 19H42L30 34Z" fill="currentColor" fill-opacity=".16"/>
+            <path d="M37 35v36m86-36v36M27 73h106M46 38v31m68-31v31"/>
+            <path d="m52 41 12 26m44-26L96 67" opacity=".5"/>
+            <path d="M82 43v17m0-17 11-3v6l-11 3"/>
+            <ellipse cx="77" cy="61" rx="5" ry="3" fill="currentColor"/>
+            <path d="M48 94v-3a7 7 0 0 1 14 0v3m11 0v-3a7 7 0 0 1 14 0v3m11 0v-3a7 7 0 0 1 14 0v3" opacity=".75"/>
+            <path d="M23 14v10m-5-5h10m109-6v8m-4-4h8" opacity=".62"/>
+          </svg>
+        </div>
+        <div class="copy">
+          <span class="category">Idle tycoon</span>
+          <h2>Concert Empire</h2>
+          <p>Run concerts and grow from backyard gigs to stadium shows.</p>
+          <span class="action">Visit the game site <span aria-hidden="true">↗</span></span>
+        </div>
+      </a>
+
+      <a class="project music" href="https://kallitone.com/">
+        <div class="art" aria-hidden="true">
+          <svg viewBox="0 0 160 104" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+            <circle cx="80" cy="52" r="39" fill="currentColor" fill-opacity=".13"/>
+            <circle cx="80" cy="52" r="30" opacity=".55"/>
+            <circle cx="80" cy="52" r="22" opacity=".55"/>
+            <circle cx="80" cy="52" r="12"/>
+            <circle cx="80" cy="52" r="2.5" fill="currentColor"/>
+            <path d="M47 52a33 33 0 0 1 33-33m0 66a33 33 0 0 0 33-33"/>
+            <path d="M24 46v12m-8-8v4m16-16v28m96-28v28m8-20v12m8-8v4" opacity=".72"/>
+          </svg>
+        </div>
+        <div class="copy">
+          <span class="category">Music discovery</span>
+          <h2>Kallitone</h2>
+          <p>Discover independent music through blind listening and voting.</p>
+          <span class="action">Visit Kallitone <span aria-hidden="true">↗</span></span>
+        </div>
+      </a>
+    </nav>
+  </main>
+</body>
+</html>
